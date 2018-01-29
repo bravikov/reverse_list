@@ -15,7 +15,8 @@ Node* reverseList(Node* head)
     Node* previous = nullptr;
     Node* current = head;
 
-    while(current != nullptr) {
+    while(current != nullptr)
+    {
         Node* next = current->next;
         current->next = previous;
         previous = current;
@@ -34,7 +35,8 @@ void printList(Node* head)
     std::cout << printCount++ << " list: ";
 
     Node* node = head;
-    while (node != nullptr) {
+    while (node != nullptr)
+    {
         std::cout << node->value << " ";
         node = node->next;
     }
@@ -45,7 +47,8 @@ void printList(Node* head)
 void deleteList(Node* head)
 {
     Node* node = head;
-    while (node != nullptr) {
+    while (node != nullptr)
+    {
         Node* next = node->next;
         delete node;
         node = next;
@@ -93,8 +96,9 @@ void test()
 
     Node* node = node0;
     static const int listSize = 10;
-    for (int i = 1; i < listSize; i++) {
-        Node *newNode = new Node{i};
+    for (int i = 1; i < listSize; i++)
+    {
+        Node* newNode = new Node{i};
         node->next = newNode;
         node = newNode;
 
